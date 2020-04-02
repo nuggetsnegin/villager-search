@@ -6,7 +6,23 @@
 export default {
   data() {
     return {
-      villagers: {}
+      villagers: [
+        {
+          id: 1,
+          name: "Bob",
+          personality: "Lazy"
+        },
+        {
+          id: 2,
+          name: "Ocatvian",
+          personality: "Cranky"
+        },
+        {
+          id: 3,
+          name: "Felicity",
+          personality: "Peppy"
+        }
+      ]
     };
   }
 };
