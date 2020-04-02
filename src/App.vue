@@ -1,26 +1,35 @@
 <template>
-  <div id="app"></div>
+  <div id="app"><Favorite /></div>
 </template>
 
 <script>
+import Favorite from "./components/Favorite";
+
 export default {
+  name: "app",
+  components: {
+    Favorite
+  },
   data() {
     return {
       villagers: [
         {
           id: 1,
           name: "Bob",
-          personality: "Lazy"
+          personality: "Lazy",
+          favorite: false
         },
         {
           id: 2,
           name: "Ocatvian",
-          personality: "Cranky"
+          personality: "Cranky",
+          favorite: false
         },
         {
           id: 3,
           name: "Felicity",
-          personality: "Peppy"
+          personality: "Peppy",
+          favorite: false
         }
       ]
     };
