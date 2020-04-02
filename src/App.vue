@@ -1,5 +1,5 @@
 <template>
-  <div id="app"><Favorite /></div>
+  <div id="app"><Favorite v-bind:villagers="villagers" /></div>
 </template>
 
 <script>
