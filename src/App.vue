@@ -1,14 +1,20 @@
 <template>
-  <div id="app"><Favorite v-bind:villagers="villagers" /></div>
+  <div id="app">
+    <h1>Villagers</h1>
+    <SearchVue />
+    <VillagerCard v-bind:villagers="villagers" />
+  </div>
 </template>
 
 <script>
-import Favorite from "./components/Favorite";
+import SearchVue from "./components/Search";
+import VillagerCard from "./components/VillagerCard";
 
 export default {
   name: "app",
   components: {
-    Favorite
+    VillagerCard,
+    SearchVue
   },
   data() {
     return {
@@ -3438,5 +3444,14 @@ html {
 body {
   background-image: url("/src/assets/bg.png");
   background-repeat: repeat;
+  font-family: "Inconsolata", monospace;
+}
+
+h1 {
+  font-size: 7rem;
+  letter-spacing: 5px;
+  color: rgb(46, 46, 46);
+  text-align: center;
+  text-transform: uppercase;
 }
 </style>

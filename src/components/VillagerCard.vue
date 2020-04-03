@@ -1,6 +1,5 @@
 <template>
   <div class="wrapper">
-    <h1>Villagers</h1>
     <div class="villager-container">
       <div v-bind:key="villager.id" v-for="villager in villagers">
         <ul class="villager-card">
@@ -17,7 +16,7 @@
 
 <script>
 export default {
-  name: "Favorite",
+  name: "VillagerCard",
   props: ["villagers"]
 };
 </script>
@@ -29,16 +28,7 @@ export default {
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  font-family: "Inconsolata", monospace;
   background-repeat: repeat;
-}
-
-h1 {
-  font-size: 7rem;
-  letter-spacing: 5px;
-  color: rgb(46, 46, 46);
-  text-align: center;
-  text-transform: uppercase;
 }
 
 li {
