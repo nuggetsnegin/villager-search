@@ -3430,4 +3430,13 @@ textarea {
   color: #000;
   padding: 0.2em 0;
 }
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url("/src/assets/bg.png");
+  background-repeat: repeat;
+}
 </style>
