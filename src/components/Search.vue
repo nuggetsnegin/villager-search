@@ -45,7 +45,7 @@ export default {
 
 input {
   border-radius: 25px;
-  border: 2px solid rgb(63, 63, 63);
+  border: 2px solid rgb(29, 29, 29);
   padding: 10px;
 }
 </style>

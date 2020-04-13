@@ -1,8 +1,32 @@
 <template>
   <div id="app">
-    <h1>Villagers</h1>
-    <Search />
-    <VillagerCard v-bind:villagers="villagers" />
+    <main>
+      <h1>Villagers</h1>
+      <svg
+        class="waves"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28"
+        preserveAspectRatio="none"
+        shape-rendering="auto"
+      >
+        <defs>
+          <path
+            id="gentle-wave"
+            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+          />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.6)" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.4)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.2)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
+      </svg>
+
+      <Search />
+      <VillagerCard v-bind:villagers="villagers" />
+    </main>
   </div>
 </template>
 
@@ -306,17 +330,40 @@ html {
   font-size: 62.5%;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 body {
-  background-image: url("/src/assets/bg.png");
+  background-image: url("./assets/bg.png");
   background-repeat: repeat;
-  font-family: "Inconsolata", monospace;
+  font-family: "Varela Round", sans-serif;
 }
 
 h1 {
   font-size: 7rem;
   letter-spacing: 5px;
-  color: rgb(46, 46, 46);
   text-align: center;
   text-transform: uppercase;
+  color: rgb(66, 66, 66);
+}
+
+main {
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin: 16px auto;
+  border-radius: 40px;
+  padding: 16px 0px;
+  padding-bottom: 16px;
+  background: #f5f8ff;
+  color: #686868;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  margin-bottom: -7px;
+  max-height: 150px;
 }
 </style>

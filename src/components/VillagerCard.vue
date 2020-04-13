@@ -41,9 +41,10 @@ li {
 .villager-name {
   text-transform: uppercase;
   font-size: 3rem;
-  background: white;
-  border-radius: 25px;
-  margin-bottom: 1rem;
+  background: rgb(235, 255, 236);
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
   color: rgb(68, 67, 68);
 }
 
@@ -55,12 +56,15 @@ li {
 
 ul {
   padding: 1rem;
-  background: rgb(214, 230, 210);
+  background: #ffffff;
 }
+
 .villager-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
+  gap: 0.2%;
+  background: #ffffff;
 }
 
 img {
