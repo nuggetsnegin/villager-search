@@ -2,7 +2,17 @@
   <div class="search-container">
     <label>Search Villager</label>
     <input type="text" v-model="search" />
-    <!-- <div v-bind:key="villagers.name" v-for="villagers in filteredList"></div> -->
+    <div v-bind:key="villager.id" v-for="villager in filteredList">
+      <ul class="villager-card">
+        <li class="villager-name">{{ villager.name }}</li>
+        <li class="villager-image">
+          <img v-bind:src="villager.image" />
+        </li>
+        <li class="villager-species">{{ villager.species }}</li>
+        <li class="villager-personality">{{ villager.personality }}</li>
+        <li class="villager-birthday">{{ villager.birthday }}</li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -12,8 +22,8 @@ export default {
   props: ["villagers"],
   computed: {
     filteredList() {
-      return this.villagers.filter(villagers => {
-        return villagers.name.toLowerCase().includes(this.search.toLowerCase());
+      return this.villagers.filter(villager => {
+        return villager.name.toLowerCase().includes(this.search.toLowerCase());
       });
     }
   }
