@@ -23,19 +23,19 @@
           <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
         </g>
       </svg>
-      <VillagerCard v-bind:villagers="villagers" />
+      <Villagers v-bind:villagers="villagers" />
     </main>
   </div>
 </template>
 
 <script>
-import VillagerCard from "./components/VillagerCard";
+import Villagers from "./components/Villagers";
 import { VillagerList } from "./components/VillagerList";
 
 export default {
   name: "app",
   components: {
-    VillagerCard
+    Villagers
   },
   data() {
     return {
