@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <main>
-      <h1>Villagers</h1>
+      <h1>Villager Search</h1>
       <svg
         class="waves"
         xmlns="http://www.w3.org/2000/svg"
@@ -25,17 +25,20 @@
       </svg>
       <Villagers v-bind:villagers="villagers" />
     </main>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Villagers from "./components/Villagers";
+import Footer from "./components/Footer";
 import { VillagerList } from "./components/VillagerList";
 
 export default {
   name: "app",
   components: {
-    Villagers
+    Villagers,
+    Footer
   },
   data() {
     return {
@@ -333,11 +336,12 @@ body {
 }
 
 h1 {
+  padding-top: 1em;
   font-size: 7rem;
   letter-spacing: 5px;
   text-align: center;
   text-transform: uppercase;
-  color: rgb(66, 66, 66);
+  color: rgb(32, 32, 32);
 }
 
 main {
@@ -359,6 +363,6 @@ main {
   position: relative;
   width: 100%;
   margin-bottom: -7px;
-  max-height: 150px;
+  max-height: 100px;
 }
 </style>

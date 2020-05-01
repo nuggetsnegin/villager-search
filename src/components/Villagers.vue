@@ -2,6 +2,12 @@
   <div class="wrapper">
     <div class="search-container">
       <h2>Search</h2>
+      <p>
+        Search by
+        <span>name</span>,
+        <span>species</span>, or
+        <span>personality type!</span>
+      </p>
       <input type="text" v-model="filterText" />
     </div>
     <div class="villager-container">
@@ -32,7 +38,12 @@ export default {
   computed: {
     filteredList() {
       let filter = new RegExp(this.filterText, "i"); //regex for capitalization
-      return this.villagers.filter(villager => villager.name.match(filter));
+      return this.villagers.filter(
+        villager =>
+          villager.name.match(filter) ||
+          villager.species.match(filter) ||
+          villager.personality.match(filter)
+      );
     }
   }
 };
@@ -55,12 +66,14 @@ li {
 
 .villager-name {
   text-transform: uppercase;
-  font-size: 3rem;
-  background: rgb(235, 255, 236);
+  font-size: 2.4rem;
+  background: rgba(154, 214, 143, 0.5);
   width: 80%;
   margin: 0 auto;
   margin-bottom: 2rem;
-  color: rgb(68, 67, 68);
+  color: rgb(31, 31, 31);
+  padding: 5px 0;
+  border-radius: 3px;
 }
 
 .villager-species,
@@ -92,20 +105,30 @@ img {
 
 .search-container {
   font-size: 3rem;
+  color: rgb(31, 31, 31);
   letter-spacing: 10px;
   flex-direction: column;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  background: white;
+  padding: 1em 0;
 }
 
 input {
   border-radius: 25px;
-  border: 2px solid rgb(29, 29, 29);
+  border: 2px solid rgb(119, 119, 119);
   padding: 10px;
   margin: 0 auto;
+}
+
+p {
+  font-size: 1.75rem;
+  text-transform: initial;
+  letter-spacing: normal;
+  margin-bottom: 0.6em;
+  color: rgb(31, 31, 31);
+  padding-top: 10px;
 }
 </style>
