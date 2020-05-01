@@ -5,7 +5,7 @@
       <input type="text" v-model="filterText" />
     </div>
     <div class="villager-container">
-      <div v-bind:key="villager.id" v-for="villager in villagers">
+      <div v-bind:key="villager.id" v-for="villager in filteredList">
         <ul class="villager-card">
           <li class="villager-name">{{ villager.name }}</li>
           <li class="villager-image">
