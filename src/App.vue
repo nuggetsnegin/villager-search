@@ -23,28 +23,23 @@
           <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
         </g>
       </svg>
-
-      <Search />
       <VillagerCard v-bind:villagers="villagers" />
     </main>
   </div>
 </template>
 
 <script>
-import Search from "./components/Search";
 import VillagerCard from "./components/VillagerCard";
 import { VillagerList } from "./components/VillagerList";
 
 export default {
   name: "app",
   components: {
-    VillagerCard,
-    Search
+    VillagerCard
   },
   data() {
     return {
-      villagers: VillagerList,
-      search: ""
+      villagers: VillagerList
     };
   }
 };
