@@ -2,7 +2,7 @@
   "name": "vue-acdb",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nuggetsnegin.github.io/villager-search/",
+  "homepage": "https://github.com/nuggetsnegin/villager-search/",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
