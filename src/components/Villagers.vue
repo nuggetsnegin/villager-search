@@ -131,4 +131,41 @@ p {
   color: rgb(31, 31, 31);
   padding-top: 10px;
 }
+
+span{
+  color: rgb(93, 148, 93);
+  font-weight: 900;
+}
+
+@media(max-width: 1250px){
+  .villager-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media(max-width: 950px){
+  .villager-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 650px){
+  .villager-container {
+    display: block;
+  }
+
+  p{
+    width: 60%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  input{
+    width: 50%;
+  }
+
+  h2{
+    font-size: 2.5rem;
+  }
+}
 </style>

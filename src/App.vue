@@ -365,4 +365,26 @@ main {
   margin-bottom: -7px;
   max-height: 100px;
 }
+
+@media(max-width: 1250px){
+  main{
+    max-width: 900px;
+  }
+}
+
+@media(max-width: 900px){
+  main{
+    max-width: 600px;
+  }
+}
+
+@media(max-width: 650px){
+  main{
+    max-width: 350px;
+  }
+
+  h1{
+    font-size: 4rem;
+  }
+}
 </style>
